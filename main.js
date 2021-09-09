@@ -6,23 +6,23 @@ leftwristx=""
 
 leftwristy=""
 
-leftwristscore=""
+leftwristscore=0;
 
-rightwristscore=""
+rightwristscore=0;
 
 song=""
 
 function draw()
 {
     image(video, 0, 0, 500, 500);
-    if (leftwristscore>0.2) {
-    circle(leftwristx, leftwristy, 20);
     fill("red");
     stroke("red");
+    if (leftwristscore > 0.2) {
+    circle(leftwristx, leftwristy, 20);
     numleftwristy=Number(leftwristy);
     removedec=floor(numleftwristy);
     volume=removedec/500;
-    document.getElementById(div-volume).innnerHTML=volume;
+    document.getElementById("div-volume").innnerHTML=volume;
     song.setVolume(volume);
     }
 }
